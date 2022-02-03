@@ -10,7 +10,7 @@ markdown Webviewer notepad++ plugins
 
 
 ### License and Credits
-The MarkdownWebPlusPlus is released under the MIT license.
+The MarkdownWebPlusPlus is released under \[undecide yet].
 
 This Notepad++ plugin integrates the sources of multiple other libraries, because of issues with the library merging process. Credits and thanks to all the developers working on these great projects:
 * [markdownviewerplusplus][14], by Savas Ziplies nea, under [the MIT license](https://github.com/nea/MarkdownViewerPlusPlus/blob/master/LICENSE.md)
