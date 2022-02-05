@@ -12,3 +12,4 @@ markdown Webviewer notepad++ plugins, replace [markdownViewerplusplus](https://g
 ### others 
 1. [release package](MarkdownWebPlusPlus-1.0.0-x86.zip)
 1. [License and Credits](LICENSE.md)
+3. [Npp-Markdown-Viewer](https://github.com/madhur/Npp-Markdown-Viewer)
