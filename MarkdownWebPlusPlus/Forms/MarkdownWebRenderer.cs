@@ -14,8 +14,8 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
 
     public class MarkdownWebRenderer : AbstractRenderer
     {
-        //public MarkdownViewerHtmlPanel markdownViewerHtmlPanel;
-        public System.Windows.Forms.WebBrowser markdownViewerHtmlPanel;
+        //public MarkdownViewerHtmlPanel markdownWebHtmlPanel;
+        public System.Windows.Forms.WebBrowser markdownWebHtmlPanel;
         /// <summary>
         /// 
         /// </summary>
@@ -32,21 +32,21 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
         protected override void Init()
         {
             base.Init();
-            this.markdownViewerHtmlPanel = new System.Windows.Forms.WebBrowser();
-            //this.markdownViewerHtmlPanel.AllowDrop = false;
-            this.markdownViewerHtmlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.markdownViewerHtmlPanel.IsContextMenuEnabled = true;
-            this.markdownViewerHtmlPanel.Location = new System.Drawing.Point(0, 24);
-            this.markdownViewerHtmlPanel.MinimumSize = new System.Drawing.Size(20, 20);
-            this.markdownViewerHtmlPanel.Name = "markdownViewerHtmlPanel";
-            this.markdownViewerHtmlPanel.Size = new System.Drawing.Size(284, 237);
-            this.markdownViewerHtmlPanel.TabIndex = 0;
-            //this.markdownViewerHtmlPanel.AvoidImagesLateLoading = false;
+            this.markdownWebHtmlPanel = new System.Windows.Forms.WebBrowser();
+            //this.markdownWebHtmlPanel.AllowDrop = false;
+            this.markdownWebHtmlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.markdownWebHtmlPanel.IsContextMenuEnabled = true;
+            this.markdownWebHtmlPanel.Location = new System.Drawing.Point(0, 24);
+            this.markdownWebHtmlPanel.MinimumSize = new System.Drawing.Size(20, 20);
+            this.markdownWebHtmlPanel.Name = "markdownWebHtmlPanel";
+            this.markdownWebHtmlPanel.Size = new System.Drawing.Size(284, 237);
+            this.markdownWebHtmlPanel.TabIndex = 0;
+            //this.markdownWebHtmlPanel.AvoidImagesLateLoading = false;
             //Add a custom image loader
-            //this.markdownViewerHtmlPanel.ImageLoad += OnImageLoad;
+            //this.markdownWebHtmlPanel.ImageLoad += OnImageLoad;
             //Add to view
-            this.Controls.Add(this.markdownViewerHtmlPanel);
-            this.Controls.SetChildIndex(this.markdownViewerHtmlPanel, 0);
+            this.Controls.Add(this.markdownWebHtmlPanel);
+            this.Controls.SetChildIndex(this.markdownWebHtmlPanel, 0);
             //
         }
 
@@ -57,12 +57,12 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
         /// <param name="fileInfo"></param>
         public override void Render(string text, FileInformation fileInfo)
         {
-            //Uri uri1 = new Uri(this.markdownViewerHtmlPanel.Address);
-            //this.markdownViewerHtmlPanel.Navigate(fileInfo.FileDirectory+"\\" + fileInfo.FileName);
+            //Uri uri1 = new Uri(this.markdownWebHtmlPanel.Address);
+            //this.markdownWebHtmlPanel.Navigate(fileInfo.FileDirectory+"\\" + fileInfo.FileName);
             base.Render( text, fileInfo);
-            this.markdownViewerHtmlPanel.DocumentText = BuildHtml(ConvertedText, fileInfo.FileName);
-            //this.markdownViewerHtmlPanel.Url.AbsolutePath = fileInfo.FileDirectory;
-           // Console.WriteLine(this.markdownViewerHtmlPanel.Url.AbsolutePath);
+            this.markdownWebHtmlPanel.DocumentText = BuildHtml(ConvertedText, fileInfo.FileName);
+            //this.markdownWebHtmlPanel.Url.AbsolutePath = fileInfo.FileDirectory;
+           // Console.WriteLine(this.markdownWebHtmlPanel.Url.AbsolutePath);
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
         /// <param name="scrollRatio"></param>
         public override void ScrollByRatioVertically(double scrollRatio)
         {
-            //this.markdownViewerHtmlPanel.ScrollByRatioVertically(scrollRatio);
+            //this.markdownWebHtmlPanel.ScrollByRatioVertically(scrollRatio);
         }
 
         /// <summary>
@@ -87,9 +87,9 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
         /// </summary>
         protected override void Dispose(bool disposing)
         {
-            if (this.markdownViewerHtmlPanel != null)
+            if (this.markdownWebHtmlPanel != null)
             {
-                //this.markdownViewerHtmlPanel.ImageLoad -= OnImageLoad;
+                //this.markdownWebHtmlPanel.ImageLoad -= OnImageLoad;
             }
             base.Dispose(disposing);
         }
