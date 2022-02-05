@@ -10,4 +10,5 @@ markdown Webviewer notepad++ plugins, replace [markdownViewerplusplus](https://g
 5. target on office automation and management system;
 
 ### others 
+1. [release package](MarkdownWebPlusPlus-1.0.0-x86.zip)
 1. [License and Credits](LICENSE.md)
