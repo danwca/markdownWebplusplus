@@ -21,6 +21,7 @@
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
+    <notepadpath>C:\Program Files (x86)\Notepad++\plugins</notepadpath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +96,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlRenderer">
@@ -302,10 +306,10 @@
     <!-- Visual Studio < 2017 -->
     <DllExportTask Condition="Exists('$(DevEnvDir)\..\..\VC\bin')" Platform="$(Platform)" PlatformTarget="$(PlatformTarget)" CpuType="$(CpuType)" EmitDebugSymbols="$(DebugSymbols)" DllExportAttributeAssemblyName="$(DllExportAttributeAssemblyName)" DllExportAttributeFullName="$(DllExportAttributeFullName)" Timeout="$(DllExportTimeout)" KeyContainer="$(KeyContainerName)$(AssemblyKeyContainerName)" KeyFile="$(KeyOriginatorFile)" ProjectDirectory="$(MSBuildProjectDirectory)" InputFileName="$(TargetPath)" FrameworkPath="$(TargetedFrameworkDir);$(TargetFrameworkDirectory)" LibToolPath="$(DevEnvDir)\..\..\VC\bin" LibToolDllPath="$(DevEnvDir)" SdkPath="$(SDK40ToolsPath)" />
     <!-- Visual Studio >= 2017 -->
-    <message Text="300 danw.ca : Exists('$(DevEnvDir)\..\..\VC\bin -$(Platform)- $(PlatformTarget) - $(CpuType) -$(DebugSymbols)- $(DllExportAttributeAssemblyName)-$(DllExportAttributeFullName)- $(KeyContainerName)-$(AssemblyKeyContainerName)-$(KeyOriginatorFile)- $(MSBuildProjectDirectory)- $(TargetPath)-$(TargetedFrameworkDir)-$(TargetFrameworkDirectory)-$(DevEnvDir) - $(SDK40ToolsPath)" Importance="high" />
+    <message Text="danw.ca 305 copy plugins to notepad++ : Exists('DevEnvDir=$(DevEnvDir)\..\..\VC\bin -$(Platform)- $(PlatformTarget) - $(CpuType) -$(DebugSymbols)- $(DllExportAttributeAssemblyName)-$(DllExportAttributeFullName)- $(KeyContainerName)-$(AssemblyKeyContainerName)-$(KeyOriginatorFile)- $(MSBuildProjectDirectory)- $(TargetPath)-$(TargetedFrameworkDir)-$(TargetFrameworkDirectory)-$(DevEnvDir) - $(SDK40ToolsPath)" Importance="high" />
     <DllExportTask Condition="Exists('$(DevEnvDir)\..\..\VC\Tools\MSVC\$(VCToolsVersion)\bin\Host$(Platform)\$(Platform)')" Platform="$(Platform)" PlatformTarget="$(PlatformTarget)" CpuType="$(CpuType)" EmitDebugSymbols="$(DebugSymbols)" DllExportAttributeAssemblyName="$(DllExportAttributeAssemblyName)" DllExportAttributeFullName="$(DllExportAttributeFullName)" Timeout="$(DllExportTimeout)" KeyContainer="$(KeyContainerName)$(AssemblyKeyContainerName)" KeyFile="$(KeyOriginatorFile)" ProjectDirectory="$(MSBuildProjectDirectory)" InputFileName="$(TargetPath)" FrameworkPath="$(TargetedFrameworkDir);$(TargetFrameworkDirectory)" LibToolPath="$(DevEnvDir)\..\..\VC\Tools\MSVC\$(VCToolsVersion)\bin\Host$(Platform)\$(Platform)" LibToolDllPath="$(DevEnvDir)" SdkPath="C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.1 Tools" />
-    <Message Condition="Exists('$(TargetPath)')" Text="danwpoint : Copying to $(notepadpath)\$(AssemblyName)" Importance="high" />
-    <Message Condition="!Exists('$(TargetPath)')" Text="danwpoint : $(TargetPath) not Exit.  $(notepadpath)\$(AssemblyName)" Importance="high" />
+    <Message Condition="Exists('$(TargetPath)')" Text="danwpoint 307: Copying to $(notepadpath)\$(AssemblyName)" Importance="high" />
+    <Message Condition="!Exists('$(TargetPath)')" Text="danwpoint 308: $(TargetPath) not Exit.  $(notepadpath)\$(AssemblyName)" Importance="high" />
     <Copy Condition="Exists('$(TargetPath)')" SourceFiles="$(TargetPath)" DestinationFolder="$(notepadpath)\$(AssemblyName)" ContinueOnError="false" />
     <!-- Get the current Major.Minor.Build version from the assembly -->
     <PropertyGroup>
