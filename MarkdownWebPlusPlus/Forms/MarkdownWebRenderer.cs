@@ -103,12 +103,12 @@ namespace com.danw.MarkdownWebPlusPlus.Forms
         }
  
 
-    /// <summary>
-    /// Scroll the rendered panel vertically based on the given ration
-    /// taken from Notepad++
-    /// </summary>
-    /// <param name="scrollRatio"></param>
-    public override void ScrollByRatioVertically(double scrollRatio)
+        /// <summary>
+        /// Scroll the rendered panel vertically based on the given ration
+        /// taken from Notepad++
+        /// </summary>
+        /// <param name="scrollRatio"></param>
+        public override void ScrollByRatioVertically(double scrollRatio)
         {
             //this.markdownWebHtmlPanel.ScrollByRatioVertically(scrollRatio);
             //scrollRatio = 2;

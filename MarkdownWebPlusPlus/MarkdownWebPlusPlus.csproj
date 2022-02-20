@@ -101,15 +101,6 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlRenderer">
-      <HintPath>..\..\MarkdownViewerPlusPlus\packages\HtmlRenderer.Core.1.5.0.6\lib\net40-client\HtmlRenderer.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlRenderer.PdfSharp">
-      <HintPath>..\..\MarkdownViewerPlusPlus\packages\HtmlRenderer.PdfSharp.1.5.0.6\lib\net40-client\HtmlRenderer.PdfSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlRenderer.WinForms">
-      <HintPath>..\..\MarkdownViewerPlusPlus\packages\HtmlRenderer.WinForms.1.5.0.6\lib\net40-client\HtmlRenderer.WinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Markdig, Version=0.18.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Markdig.0.18.3\lib\net40\Markdig.dll</HintPath>
     </Reference>
@@ -117,6 +108,7 @@
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualC" />
     <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
@@ -152,6 +144,9 @@
     </Compile>
     <Compile Include="Forms\AbstractRenderer.Designer.cs">
       <DependentUpon>AbstractRenderer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGoToLine.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MarkdownWebOptions.cs">
       <SubType>Form</SubType>
@@ -284,6 +279,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILMergeOrder.txt" />
+    <Content Include="Properties\star_bmp.bmp" />
+    <Content Include="Resources\star_bmp.bmp" />
     <None Include="Resources\fa-paypal-16x16.png" />
     <None Include="Resources\fa-info-16x16.png" />
     <None Include="Resources\fa-cog-16x16.png" />

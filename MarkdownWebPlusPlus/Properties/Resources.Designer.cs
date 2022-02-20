@@ -221,5 +221,13 @@ namespace com.danw.MarkdownWebPlusPlus.Properties {
                 return ResourceManager.GetString("MarkdownViewerHTML", resourceCulture);
             }
         }
+        internal static System.Drawing.Bitmap star_bmp
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("star_bmp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
